@@ -114,6 +114,7 @@ var Resizable = React.createClass({
       if (this.haveDimensionsChanged(dimensions)) {
         this.lastDimensions = dimensions;
         this.props.onResize(dimensions);
+        this.resetTriggers();
       }
     }.bind(this));
   },
