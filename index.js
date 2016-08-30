@@ -1,1 +1,1 @@
-module.exports = require('./src/component');
+module.exports = require('./dist/react-component-resizable');
