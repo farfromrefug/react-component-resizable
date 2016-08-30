@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start --single-run",
-    "build": "browserify ./src/component.js -o ./dist/react-component-resizable.js -t [ babelify --presets [ es2015 stage-2 ] ] -x react"
+    "build": "babel ./src/component.js --out-file ./dist/react-component-resizable.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,9 @@
     "object-assign": "^1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.11.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
+    "babel-preset-stage-2": "^6.13.0",
     "chai": "^3.5.0",
     "karma": "^1.1.1",
     "karma-browserify": "^5.0.5",
