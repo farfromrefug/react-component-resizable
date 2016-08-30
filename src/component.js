@@ -1,5 +1,4 @@
 var React = global.React || require('react');
-var objectAssign = require('object-assign');
 
 var Resizable = React.createClass({
 
@@ -86,7 +85,7 @@ var Resizable = React.createClass({
 
   render: function() {
     const {triggersClass, expandClass, contractClass, embedCss, onResize, ...rest} = this.props;
-    var props = objectAssign({}, rest, {onScroll: this.onScroll, ref: 'resizable'});
+    var props = Object.assign({}, rest, {onScroll: this.onScroll, ref: 'resizable'});
     return (
       React.createElement('div', props,
         [
@@ -106,4 +105,3 @@ var Resizable = React.createClass({
 });
 
 module.exports = Resizable;
-global.Resizable = Resizable;
