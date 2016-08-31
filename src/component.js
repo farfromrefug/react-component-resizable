@@ -63,7 +63,7 @@ var Resizable = React.createClass({
     this.r = this.requestFrame(function () {
       var dimensions = this.getDimensions();
 
-      if (this.haveDimensionsChanged(dimensions)) {
+      if (dimensions && this.haveDimensionsChanged(dimensions)) {
         this.lastDimensions = dimensions;
         this.props.onResize(dimensions);
         this.resetTriggers();
@@ -73,10 +73,12 @@ var Resizable = React.createClass({
 
   getDimensions: function () {
     var el = this.refs.resizable;
-    return {
-      width: el.offsetWidth,
-      height: el.offsetHeight
-    };
+    if (el) {
+      return {
+        width: el.offsetWidth,
+        height: el.offsetHeight
+      };
+    }
   },
 
   haveDimensionsChanged: function (dimensions) {
