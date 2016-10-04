@@ -34,6 +34,7 @@ The component will automatically embed some required style. This can be turned o
 .resize-triggers {
   visibility: hidden;
   opacity: 0;
+  z-index: -1;
 }
 
 .resize-triggers, .resize-triggers > div, .contract-trigger:before {
