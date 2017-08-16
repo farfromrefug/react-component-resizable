@@ -122,4 +122,4 @@ Resizable.propTypes = {
     onResize: PropTypes.func.isRequired
 };
 
-module.exports = Resizable;
+export default Resizable;

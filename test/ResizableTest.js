@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Resizable = require('../src/component');
+var Resizable = require('../src/component').default;
 var ReactTestUtils = require('react-addons-test-utils');
 
 describe('Resizable', function () {
