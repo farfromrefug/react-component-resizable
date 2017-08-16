@@ -53,6 +53,7 @@ var Resizable = function (_React$Component) {
         };
 
         _this.onScroll = _this.onScroll.bind(_this);
+        _this.resetTriggers = _this.resetTriggers.bind(_this);
         return _this;
     }
 
