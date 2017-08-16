@@ -23,6 +23,7 @@ class Resizable extends React.Component {
         };
 
         this.onScroll = this.onScroll.bind(this);
+        this.resetTriggers = this.resetTriggers.bind(this);
     }
 
     componentDidMount() {
